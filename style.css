@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+
+
+/******************************************************************************/
+/* mangler
+  * sytling
+  * html indehold
+  * html indehold styling
+  * css mobile version værdigøres mangler **mockup**
+  * nav -> ancour Js -> film i js til hvordan.
+
+  * noget bagrunds fave til body?
+
+/*  /* /* /*   */
+  /*          add video player in i sæted for cover billeder, få video fra simon / trine
+
+
+    * fixe layout for 768 pix størelse af skærm "tablets" ser mindre dumt ud.
+/*
+  * kalender til højre side? bruge sammen ide som med nav så man kan få den
+    poppet ind fra siden?
+
+/******************************************************************************/
+
+
+
+/*** general styling ***/
+
+
+*{
+ margin: 0;
+ padding: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  background:;
+  }
+
+/* Text general styling */
+
+
+
+/* IDEA: kanvære at vi skal indelel ind til mobile og desktop styling */
+
+
+h2{ font-size: 2em;
+  font-family: aileron,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  } /* headline styling */
+
+
+p{font-size: 1em;
+  padding: 1em;
+  font-family: aileron,sans-serif;
+  font-weight: 400;
+  font-style: normal;} /*  paragraft styling*/
+
+
+
+
+
+
+
+
+/******************************************************************************/
+/** Grid area asigment **/
+
+/* coverBillede*/
+.coverBillede{grid-area: CB_G;}
+.coverBilledeImg{grid-area: CG_B}
+/* min musik */
+.minMusik{grid-area:MM_G;}
+.minMusikHeadline{grid-area:MM_H;}
+.minMusikBillede{grid-area:MM_B;}
+.minMusikText{grid-area:MM_T;}
+/* rapferat */
+.rapferat{grid-area: RF_G;}
+.rapferatHeadline{grid-area: RF_H;}
+.rapferatBillede{grid-area: RF_B;}
+.rapferatText{grid-area: RF_T;}
+
+/* freestyle */
+.freestyle{grid-area:FS_G;}
+.freestyleHeadline{grid-area:FS_H;}
+.freestyleBillede{grid-area:FS_B;}
+.freestyleText{grid-area:FS_T;}
+
+/* koncerter */
+.koncerter{grid-area:KC_G;}
+.koncerterHeadline{grid-area: KC_H;}
+.koncerterBillede{grid-area:KC_B;}
+.koncerterText{grid-area:KC_T;}
+
+/* omPelle */
+.omPelle{grid-area: OP_G;}
+.omPelleHeadline{grid-area:OP_H;}
+.omPelleBillede{grid-area:OP_B;}
+.omPelleText{grid-area:OP_T;}
+
+/* Book pelle */
+.bookPelle{grid-area:BP_G;}
+.bookPelleHeadline{grid-area:BP_H;}
+.bookPelleBillede{grid-area:BP_B;}
+.bookPelleText{grid-area:BP_T;}
+
+/******************************************************************************/
+/* Nav_bar styling*/
+#Nav_bar{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #151719;
+  left: -200px;
+  transition: all 500ms linear;  }
+
+#Nav_bar.active{
+   left:0px;
+ }
+
+#Nav_bar ul li{
+  color: rgba(230,230,230,0.9);
+  list-style: none;
+  list-style-type: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(100,100,100,0.3);
+  font-size: 2em;
+  }
+
+#Nav_bar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#Nav_bar .toggle-btn{
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  }
+
+#Nav_bar .toggle-btn span{
+ display: block;
+ width: 30px;
+ height: 5px;
+ background-color: #151719;
+ margin: 5px 0px;}
+
+.spanColor{background-color: #151719; }
+
+#Nav_bar ul li:hover{background-color: black;}
+
+.spanColor2{
+  background: white;
+}
+
+
+
+/******************************************************************************/
+/** wrapper & sections **/
+
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto, 0.5fr);
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 100%;
+  grid-template-areas:
+  "CB_G CB_G CB_G CB_G"
+  "MM_G MM_G MM_G MM_G"
+  "RF_G RF_G RF_G RF_G"
+  "KC_G KC_G KC_G KC_G"
+  "FS_G FS_G FS_G FS_G"
+  "OP_G OP_G OP_G OP_G"
+  "BP_G BP_G BP_G BP_G";
+}
+
+/* ændring så det få til hvordan vi vil have mobil version til at være */
+
+
+
+.coverBillede{
+  display: grid;
+  grid-template-areas:
+  "CG_B CG_B CG_B CG_B"
+} /* mangler*/
+
+.minMusik{
+  display: grid;
+  grid-template-areas:
+  "MM_H"
+  "MM_B"
+  "MM_T";
+}
+
+.rapferat{
+  display: grid;
+  grid-template-areas:
+  "RF_H"
+  "RF_B"
+  "RF_T";
+}
+#rapferat_Anchor{
+  
+}
+
+.freestyle{
+  display: grid;
+  grid-template-areas:
+  "FS_H"
+  "FS_B"
+  "FS_T";
+}
+
+.koncerter{
+  display: grid;
+  grid-template-areas:
+  "KC_H"
+  "KC_B"
+  "KC_T";
+}
+
+.omPelle{
+  display: grid;
+  grid-template-areas:
+  "OP_H"
+  "OP_B"
+  "OP_T";
+}
+
+.bookPelle{
+  display: grid;
+  grid-template-areas:
+  "BP_H"
+  "BP_B"
+  "BP_T";
+}
+
+
+/* billeder styling */
+
+.coverBilledeImg{width: 100%}
+
+
+/* desktop verison*/
+
+@media only screen and (min-width: 426px) {
+
+
+/* desktop text styling*/
+h2{} /* headline styling */
+
+
+p{} /*  paragraft styling*/
+
+
+
+/* desktop wrapper */
+
+.wrapper{
+    display: grid;
+    max-width: 100%;
+    grid-template-areas:
+    "CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G"
+    "CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G CB_G"
+    "MM_G MM_G MM_G MM_G MM_G MM_G MM_G MM_G MM_G MM_G MM_G MM_G"
+    "RF_G RF_G RF_G RF_G RF_G RF_G RF_G RF_G RF_G RF_G RF_G RF_G"
+    "FS_G FS_G FS_G FS_G FS_G FS_G FS_G FS_G FS_G FS_G FS_G FS_G"
+    "KC_G KC_G KC_G KC_G KC_G KC_G KC_G KC_G KC_G KC_G KC_G KC_G"
+    "OP_G OP_G OP_G OP_G OP_G OP_G OP_G OP_G OP_G OP_G OP_G OP_G"
+    "BP_G BP_G BP_G BP_G BP_G BP_G BP_G BP_G BP_G BP_G BP_G BP_G";
+  }
+
+/* angiver alle grid areas længde */
+.coverBillede, .minMusik, .rapferat, .freestyle, .koncerter, .omPelle, .bookPelle{
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  }
+
+.rapferatImg, .freestyleImg, .koncerterImg, .omPelleImg {
+  width: 100%
+}
+
+.coverBillede{
+  grid-template-areas:
+  "CG_B CG_B CG_B CG_B CG_B CG_B"
+  } /* mangler*/
+
+
+.minMusik{
+  grid-template-areas:
+  "MM_H MM_H"
+  "MM_B MM_T";
+}
+
+
+
+.rapferat{
+  grid-template-areas:
+  ". RF_H RF_H RF_H RF_H ."
+  ". RF_T RF_T RF_B RF_B .";
+}
+
+.freestyle{
+  grid-template-areas:
+  ". FS_H FS_H FS_H FS_H ."
+  ". FS_B FS_B FS_T FS_T .";
+}
+
+.koncerter{
+  grid-template-areas:
+  ". KC_H KC_H KC_H KC_H ."
+  ".  KC_T KC_T KC_B KC_B.";
+}
+
+.omPelle{
+  grid-template-areas:
+  ". OP_H OP_H OP_H OP_H ."
+  ". OP_B OP_B OP_T OP_T .";
+}
+
+.bookPelle{
+  grid-template-areas:
+  ". BP_H BP_H ."
+  ". BP_B BP_T .";
+}
+
+}/* media end tobog */
