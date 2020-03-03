@@ -6,15 +6,6 @@ function toggleSidebar(){
 
 
 
-
-
-
-
-
-
-
-
-
 //* smooth scrolling  se igennem    https://codepen.io/zFunx/pen/GmMGax    v2  *//
 // https://css-tricks.com/aos-css-driven-scroll-animation-library/         v3
 
