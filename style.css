@@ -36,8 +36,14 @@
 body{
   display: flex;
   justify-content: center;
-  background:;
+  background-image:url("Billeder/Pelle_background.png");
+  background-size: cover;
+  background-attachment: fixed;
+
+
   }
+
+
 
 /* Text general styling */
 
@@ -56,16 +62,31 @@ h2{ font-size: 2em;
 
 p{font-size: 1em;
   padding: 1em;
+
   font-family: aileron,sans-serif;
   font-weight: 400;
   font-style: normal;} /*  paragraft styling*/
 
 
+.min_Musik_Title{
+padding:32px;}
+
+.rapferat_title, .freestyle_title, .koncerter_title, .omPelle_title{
+  padding-bottom: 1em;
+}
 
 
+.BackgroundImg{
+  position: absolute;
+  width: 100vw;
+  z-index: -15;
 
 
+}
 
+.omPelleImg, .koncerterImg, .freestyleImg, .rapferatImg{
+  border: 0.5em solid #000000;
+}
 
 /******************************************************************************/
 /** Grid area asigment **/
@@ -201,8 +222,9 @@ p{font-size: 1em;
   justify-content: center;
 }
 
-.CoverMain_video{
 
+.CoverMain_video{
+  margin-top: 32px
   display: flex;
   justify-content: center;
 
@@ -234,7 +256,7 @@ margin: 0 1em 0 1em;
 
 
 .MusikimgTj{
-  width:100%;
+  width:65%;
 
 }
 
@@ -248,7 +270,6 @@ margin: 0 1em 0 1em;
 }
 
 .rapferat{
-  background-image: linear-gradient(to left, #00086F, #FFFFFF);
   display: grid;
   grid-template-areas:
   "RF_H"
@@ -256,9 +277,15 @@ margin: 0 1em 0 1em;
   "RF_T";
 }
 
+.rapferatHeadline, .rapferatText, .koncerterHeadline, .freestyleHeadline, .freestyleText, .koncerterText, .omPelleText, .omPelle_title   {
+  text-align: center;}
+
+.rapferatBillede, .freestyleBillede, .koncerterBillede, .omPelleBillede{
+  display: flex;
+  justify-content: center;
+}
 
 .freestyle{
-  background-image: linear-gradient(to right, #2300EB, #FFFFFF); /* kan sætte % på det*/
   display: grid;
   grid-template-areas:
   "FS_H"
@@ -267,7 +294,6 @@ margin: 0 1em 0 1em;
 }
 
 .koncerter{
-    background-image: linear-gradient(to left, #001CAD, #FFFFFF);
   display: grid;
   grid-template-areas:
   "KC_H"
@@ -276,7 +302,6 @@ margin: 0 1em 0 1em;
 }
 
 .omPelle{
-    background-image: linear-gradient(to right, #174AFF, #FFFFFF);
   display: grid;
   grid-template-areas:
   "OP_H"
@@ -285,7 +310,6 @@ margin: 0 1em 0 1em;
 }
 
 .bookPelle{
-    background-image: linear-gradient(to left, #3D73FF, #FFFFFF);
   display: grid;
   grid-template-areas:
   "BP_H"
@@ -298,6 +322,10 @@ margin: 0 1em 0 1em;
 
 .coverBilledeImg{width: 100%}
 
+.bookPelleText{
+  text-align: center;
+}
+
 
 /* desktop verison*/
 
@@ -309,10 +337,13 @@ h2{font-size: 3em;
   font-weight: bold;} /* headline styling */
 
 
-p{font-size: 1.5em;
-  padding: 0.3em;} /*  paragraft styling*/
+p{font-size: 1.83em;
+  padding: 0.3em;
+  color: black} /*  paragraft styling*/
 
 
+  .rapferatBillede, .freestyleBillede, .koncerterBillede, .omPelleBillede{
+    display: block;}
 
 /* desktop wrapper */
 
@@ -341,7 +372,7 @@ p{font-size: 1.5em;
 }
 
 .coverBillede{
-grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 
@@ -363,6 +394,7 @@ grid-template-columns: repeat(6, 1fr);
 }
 
 .CoverMain_video{
+  margin-top: 32px;
   display: flex;
   justify-content: center;
 
@@ -396,7 +428,7 @@ margin: 0 0.5em 0 0.5em;
   ". MM_B MM_B MM_B MM_B .";
  }
 .minMusikImg{
-  width: 33%
+  width: 33.3%
 }
 
 
@@ -445,8 +477,28 @@ margin: 0 0.5em 0 0.5em;
 
 .bookPelle{
   grid-template-areas:
-  ". BP_H BP_H ."
-  ". BP_B BP_T .";
+  ". BP_H BP_H BP_H BP_H ."
+  ". BP_T BP_T BP_T BP_T .";
 }
+
+
+
+.freestyleText, .omPelleText, .omPelleText {
+    margin-left: 1.5em;
+}
+
+.rapferatText, .koncerterText, .freestyleText, .omPelleText, .omPelleText {
+    margin-left: 1.5em;
+    text-align: justify;
+}
+
+
+.rapferat, .freestyle, .koncerter, .omPelle{
+  grid-column-gap: 32px;
+}
+
+
+
+
 
 }/* media end tobog */

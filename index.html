@@ -15,9 +15,6 @@
 
   <body>
     <div class="wrapper">
-      <section class="BackgroundImg">
-
-      </section>
       <!--  -->
       <nav id="Nav_bar">
         <section class="toggle-btn" onclick="toggleSidebar()"><a>
@@ -41,13 +38,13 @@
 
 <section class="coverBillede"> <!-- grid  CB_G -->
   <section class="CoverMain_video"> <!-- flex  video   CM_V -->
-    <video width="600" controls>
+    <video width="1200" controls>
       <source src="Billeder/New_Tires.mp4" type="video/mp4">
     </video>
   </section>
   <section class="CoverHead"> <!-- flex headline  C_H  -->
     <anchor id="Musik_Anchor"></anchor>
-    <h2>Min Musik</h2>
+    <h2 class="min_Musik_Title">Min Musik</h2>
   </section>
   <section class="coverMusik__tj"> <!-- flex musik tjænerster  CM_Tj -->
     <a href="https://open.spotify.com/artist/5nhxT1heO9eqPXoDZEV7Gl" target="_blank"><img class="MusikimgTj" src="Billeder/Spotify.png" alt="spotify logo"></a>
@@ -65,7 +62,7 @@
 <section class="rapferat">
     <anchor id="rapferat_Anchor"></anchor>
   <article class="rapferatHeadline">
-    <h2 class="Text_Header">Rapferat</h2>
+    <h2 class="Text_Header rapferat_title">Rapferat</h2>
 
   </article>
   <article class="rapferatBillede">
@@ -82,7 +79,7 @@
 <section class="freestyle">
   <anchor id="freestyle_Anchor"></anchor>
   <article class="freestyleHeadline">
-    <h2 class="Text_Header">Freestyle</h2>
+    <h2 class="Text_Header freestyle_title">Freestyle</h2>
   </article>
   <article class="freestyleBillede">
     <img class="freestyleImg" src="Billeder/Pelle_billede_6.png" alt="">
@@ -99,10 +96,10 @@
 <section class="koncerter">
   <anchor id="koncerter_Anchor"></anchor>
 <article class="koncerterHeadline">
-  <h2 class="Text_Header">Koncerter</h2>
+  <h2 class="Text_Header koncerter_title">Koncerter</h2>
 </article>
 <article class="koncerterBillede">
-  <img class="koncerterImg" src="Billeder/Pelle_billede_3.png" alt="">
+  <img class="koncerterImg" src="Billeder/Pelle_koncert.png" alt="">
 </article>
 <article class="koncerterText">
   <p>En koncert med Pelle er et hovedspring ind i snørklede vendinger og hverdagspoesi.</p>
@@ -114,7 +111,7 @@
 <section class="omPelle">
   <anchor id="omPelle_Achor"></anchor>
   <article class="omPelleHeadline">
-    <h2 class="omPelleH2">Om Pelle</h2>
+    <h2 class="omPelle_title">Om Pelle</h2>
   </article>
   <article class="omPelleBillede">
       <img class="omPelleImg" src="Billeder/Pelle_billede_4.png" alt="">
@@ -159,19 +156,13 @@
 
   </article>
 
-  <article class="bookPelleBillede">
-
-  </article>
-
   <article class="bookPelleText">
 <!-- IDEA: ændre <br> til noget andet padding? margin? -->
-    <p>Book Pelle indenfor:</p>
-
-    <p>Rapferater</p>
-    <p>Koncerter</p>
-    <p>Freestyle</p>
+    <p>Book Pelle indenfor:
+    Rapferater
+    , Koncerter
+    , Freestyle</p>
     <p>Kontaktinfo:</p>
-
     <p>tlf: 30 23 66 89</p>
     <p>Mail: pellejonmoller@gmail.com</p>
 
